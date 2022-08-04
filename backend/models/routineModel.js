@@ -6,12 +6,12 @@ const routineSchema = new mongoose.Schema({
         required: true,
         default: "My Routine"
     },
-    owner: {
-        type: Schema.Types.ObjectId,
-        ref: "User",
-        required: true
-    },
-    days: [{ type: Schema.Types.ObjectId, ref: "Day" }]
+    // owner: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "User",
+    //     required: true
+    // },
+    // days: [{ type: Schema.Types.ObjectId, ref: "Day" }]
 });
 
 const daySchema = new mongoose.Schema({
@@ -19,7 +19,7 @@ const daySchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    exercises: [{ type: Schema.Types.ObjectId, ref: "Exercise" }]
+    exercises: [{ type: mongoose.Schema.Types.ObjectId, ref: "Exercise" }]
 });
 
 const exerciseSchema = new mongoose.Schema({
@@ -40,4 +40,4 @@ const Exercise = mongoose.model('Exercise', exerciseSchema);
 const Day = mongoose.model('Day', daySchema);
 const Routine = mongoose.model('Routine', routineSchema);
 
-module.exports = { Routine, Day, Exercise, exerciseSchema }; 
+module.exports = { Routine, Day, Exercise }; 
