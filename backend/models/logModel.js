@@ -1,18 +1,18 @@
 const mongoose = require("mongoose");
-const { exerciseSchema } = require("./routineModel");
+const { Exercise } = require("./routineModel");
 
 const logSchema = new mongoose.Schema({
     user: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: true
     },
     exercise: {
-        type: exerciseSchema,
-        required: true
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Exercise"
     },
     routine: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Routine"
     },
     actual_sets: {

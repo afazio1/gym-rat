@@ -6,12 +6,12 @@ const routineSchema = new mongoose.Schema({
         required: true,
         default: "My Routine"
     },
-    // owner: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: "User",
-    //     required: true
-    // },
-    // days: [{ type: Schema.Types.ObjectId, ref: "Day" }]
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: false
+    },
+    days: [{ type: mongoose.Schema.Types.ObjectId, ref: "Day" }]
 });
 
 const daySchema = new mongoose.Schema({
