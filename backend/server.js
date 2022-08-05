@@ -1,3 +1,4 @@
+// hello from raspberry pi
 const express = require("express");
 const connectDB = require("./config/db");
 const PORT = 3000;
