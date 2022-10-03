@@ -1,7 +1,10 @@
+import Home from "./screens/home";
+
 function App() {
   return (
     <div className="App">
-      <h1>App</h1>
+      <h1>Gym Rat</h1>
+      <Home />
     </div>
   );
 }
