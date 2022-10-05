@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/afazio1/gym-rat#readme",
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "express": "^4.18.1",
+    "framer-motion": "^7.5.2",
     "mongoose": "^6.3.9"
   },
   "devDependencies": {

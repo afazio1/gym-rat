@@ -1,10 +1,17 @@
-import { Button } from "react-bootstrap";
+import { Stack, Button } from "@chakra-ui/react";
 
 const Home = () => {
     return (
         <>
-            <Button variant="dark">Sign up</Button>
-            <Button variant="light">Log in</Button>    
+            <h1>Gym Rat</h1>
+            <Stack direction='row' spacing={4} align='center'>
+                <Button bg='black' color="white">
+                    Join Now
+                </Button>
+                <Button colorScheme='black' variant='outline'>
+                    Sign In
+                </Button>
+            </Stack>
         </>
     )
 }
